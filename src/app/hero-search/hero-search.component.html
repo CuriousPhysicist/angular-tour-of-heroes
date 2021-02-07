@@ -1,13 +1,23 @@
-<div id="search-component">
-  <h4><label for="search-box">Hero Search</label></h4>
-  <input id="search-box"
-         #searchBox
-         (input)="search(searchBox.value)" />
-  <ul class="search-result">
-    <li *ngFor="let hero of heroes$ | async">
-      <a routerLink="/detail/{{hero.id}}">
-        {{hero.name}}
-      </a>
-    </li>
-  </ul>
+<div id="search-component" class="flex flex-col p-4">
+  <h4>
+    <label for="search-box" class=""> Hero Search </label>
+  </h4>
+  <div class="flex flex-col w-1/2">
+    <input
+      id="search-box"
+      class="px-2 border border-gray-300 rounded"
+      #searchBox
+      (input)="search(searchBox.value)"
+    />
+    <ul class="flex flex-col">
+      <li
+        *ngFor="let hero of heroes$ | async"
+        class="px-2 py-1 border border-gray-400"
+      >
+        <a routerLink="/detail/{{ hero.id }}">
+          {{ hero.name }}
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>

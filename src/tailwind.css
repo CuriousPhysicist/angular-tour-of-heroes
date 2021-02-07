@@ -1,6 +1,11 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+.btn {
+  @apply px-2 py-1 mr-2 font-sans bg-gray-200 rounded;
+}
+
+@import "tailwindcss/utilities";
 
 /* Application-wide Styles */
 h1 {
@@ -8,7 +13,8 @@ h1 {
   font-family: Ariel, Helvtica, sans-serif;
   font-size: 250%;
 }
-h2, h3 {
+h2,
+h3 {
   color: #444;
   font-family: Ariel, Helvetica, sans-serif;
   font-weight: lighter;
@@ -16,7 +22,9 @@ h2, h3 {
 body {
   margin: 2em;
 }
-body, input[type="text"], button {
+body,
+input[type="text"],
+button {
   color: #333;
   font-family: Cambria, Georgia, serif;
 }
@@ -24,4 +32,3 @@ body, input[type="text"], button {
 * {
   font-family: Ariel, Helvetica, sans-serif;
 }
-
